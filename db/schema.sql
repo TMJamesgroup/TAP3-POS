@@ -1,0 +1,11 @@
+-- TAP3 POS beta schema. Apply to a dedicated database, not the TMJ Command Center database.
+CREATE TABLE IF NOT EXISTS restaurants (id UUID PRIMARY KEY, name TEXT NOT NULL, created_at TIMESTAMPTZ NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS staff (id UUID PRIMARY KEY, restaurant_id UUID NOT NULL REFERENCES restaurants(id), display_name TEXT NOT NULL, role TEXT NOT NULL CHECK (role IN ('owner','manager','server','bartender','kitchen','host')), active BOOLEAN NOT NULL DEFAULT true);
+CREATE TABLE IF NOT EXISTS dining_tables (id UUID PRIMARY KEY, restaurant_id UUID NOT NULL REFERENCES restaurants(id), label TEXT NOT NULL, UNIQUE(restaurant_id,label));
+CREATE TABLE IF NOT EXISTS menu_items (id UUID PRIMARY KEY, restaurant_id UUID NOT NULL REFERENCES restaurants(id), name TEXT NOT NULL, category TEXT NOT NULL, price_cents INTEGER NOT NULL CHECK(price_cents>=0), active BOOLEAN NOT NULL DEFAULT true);
+CREATE TABLE IF NOT EXISTS tickets (id UUID PRIMARY KEY, restaurant_id UUID NOT NULL REFERENCES restaurants(id), table_id UUID REFERENCES dining_tables(id), created_by UUID REFERENCES staff(id), status TEXT NOT NULL CHECK(status IN ('open','submitted','preparing','ready','served','void')), created_at TIMESTAMPTZ NOT NULL DEFAULT now(), updated_at TIMESTAMPTZ NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS ticket_items (id UUID PRIMARY KEY, ticket_id UUID NOT NULL REFERENCES tickets(id), menu_item_id UUID REFERENCES menu_items(id), item_name TEXT NOT NULL, unit_price_cents INTEGER NOT NULL CHECK(unit_price_cents>=0), quantity INTEGER NOT NULL CHECK(quantity>0), station TEXT NOT NULL CHECK(station IN ('kitchen','bar')), notes TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS audit_events (id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, restaurant_id UUID NOT NULL REFERENCES restaurants(id), staff_id UUID REFERENCES staff(id), action TEXT NOT NULL, object_type TEXT NOT NULL, object_id UUID, occurred_at TIMESTAMPTZ NOT NULL DEFAULT now(), details JSONB NOT NULL DEFAULT '{}'::jsonb);
+CREATE INDEX IF NOT EXISTS idx_tickets_restaurant_status ON tickets(restaurant_id,status,created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_audit_restaurant_time ON audit_events(restaurant_id,occurred_at DESC);
+-- Row isolation must be enforced by authenticated server-side authorization before exposing API access.
