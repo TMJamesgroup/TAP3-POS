@@ -134,3 +134,27 @@ nav button:last-child{background:#dde8f7!important;color:#1a4c87!important}
 .drawer-control{padding:18px;margin:12px 0;border:1px solid #94a3b8;border-radius:14px}.drawer-control-row{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.drawer-control-row select,.drawer-control-row input{min-height:44px;padding:8px;border-radius:8px}.drawer-control-row label{display:grid;gap:4px}.drawer-control button{min-height:44px}.drawer-active{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:12px;padding:12px;border-radius:10px;background:rgba(40,160,110,.12)}
 
 .receipt-logo-settings{padding:20px;margin:18px 0;border:1px solid #b9c4d1;border-radius:16px;background:#fff;color:#172a3a}.receipt-logo-settings label{display:block;margin:12px 0}.receipt-logo-settings input[type=file]{display:block;max-width:100%;margin-top:8px}.receipt-logo-preview{background:white;border:1px dashed #999;padding:18px;text-align:center;max-width:400px;margin:14px auto}.receipt-logo-preview img{max-width:100%;width:300px;image-rendering:pixelated}.receipt-logo-actions{display:flex;gap:12px;flex-wrap:wrap}.receipt-logo-actions button{min-height:44px}
+
+
+/* F15 Windows 11 touch-terminal ergonomics: fit keypad on shorter 15-inch screens. */
+@media (pointer:coarse) and (min-width:700px){
+  .access-screen{min-height:100dvh;display:flex;flex-direction:column}
+  .access-screen header{padding:10px 20px}
+  .access-screen .access-card-large{margin:12px auto;max-width:540px;padding:18px 24px}
+  .access-card-large h2{font-size:26px}
+  .access-card-large .pin-grid{gap:8px;margin:12px auto}
+  .access-card-large .pin-grid button{min-height:clamp(48px,7vh,68px);font-size:26px}
+  .access-card-large .pin-dots{margin:12px auto}
+  .access-card-large .pin-enter{min-height:52px}
+  .access-card-large .access-admin-link{min-height:44px;margin-top:6px;padding:9px}
+  .access-card-large input{min-height:52px;font-size:18px}
+  button,select,input{touch-action:manipulation}
+}
+@media (max-height:720px) and (min-width:700px){
+  .access-screen header{padding:8px 16px}
+  .access-screen .access-card-large{margin:8px auto;padding:14px 20px}
+  .access-card-large .pin-grid button{min-height:46px}
+  .access-card-large .pin-dots{margin:8px auto}
+  .access-card-large .pin-grid{margin:8px auto}
+  .access-card-large .access-admin-link{margin-top:4px}
+}
