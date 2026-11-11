@@ -1,0 +1,18 @@
+{
+  "name": "TAP3 POS — TAP 2.0",
+  "short_name": "TAP3 POS",
+  "description": "TAP3 restaurant point of sale",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#12243a",
+  "theme_color": "#12243a",
+  "icons": [
+    {
+      "src": "/tap3-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
