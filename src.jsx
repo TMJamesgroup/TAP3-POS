@@ -1,5 +1,6 @@
 import React,{useEffect,useState,useRef} from 'react';import{createRoot}from'react-dom/client';import './style.css';
 const BASE='https://yqzxmtfejjnbpcnzaznk.supabase.co',KEY='sb_publishable_vol_MVVmvlk2vXsMMw_MyA_db__yZLQ';
+if(window.location.hostname.startsWith('tap3-management')&&window.location.pathname==='/'){window.history.replaceState(null,'','/backoffice')}
 const STORE='tap3_pos_session';
 function PasswordVisibility({children}){const [visible,setVisible]=useState(false);return <span className="password-visibility-wrap">{React.cloneElement(children,{type:visible?'text':'password'})}<button type="button" className="password-visibility-toggle" aria-label={visible?'Hide password or PIN':'Show password or PIN'} aria-pressed={visible} onClick={()=>setVisible(v=>!v)}>{visible?'Hide':'Show'}</button></span>}
 
