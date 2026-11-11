@@ -158,3 +158,6 @@ nav button:last-child{background:#dde8f7!important;color:#1a4c87!important}
   .access-card-large .pin-grid{margin:8px auto}
   .access-card-large .access-admin-link{margin-top:4px}
 }
+
+/* Accessible show/hide controls for password and PIN fields */
+.password-visibility-wrap{display:inline-flex;align-items:center;gap:8px;max-width:100%;vertical-align:middle}.password-visibility-wrap>input{min-width:0;flex:1}.password-visibility-toggle{flex:none;min-width:58px;min-height:40px;padding:8px 12px;border:1px solid #8190a5;border-radius:8px;background:#f4f6fa;color:#162238;font-weight:600;cursor:pointer}.password-visibility-toggle:focus-visible{outline:3px solid #3b82f6;outline-offset:2px}
