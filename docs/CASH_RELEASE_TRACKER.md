@@ -12,8 +12,8 @@ Updated: 2026-11-15
 | Bluetooth / USB / Ethernet selector | Implemented in simulator | No discovery, pairing, print transport, or drawer kick |
 | Cash persistence schema | Committed; NOT APPLIED | db/cash_drawer_foundation.sql; review against live DB |
 | Server-side authorization helpers | Committed; NOT INTEGRATED | cash/cash-controls.js |
-| Automated cash tests | Added, NOT YET VERIFIED PASSING | npm run test:cash and Python unittest; CI workflow added |
-| Cash readiness API | Committed; DEPLOYMENT PENDING | GET /api/cash/readiness; always reports production disabled |
+| Automated cash tests | PASSING in GitHub Actions run 43739620565 | npm run test:cash and Python unittest; CI workflow added |
+| Cash readiness API | DEPLOYED (Render latest live) | GET /api/cash/readiness; always reports production disabled |
 | Authenticated cash APIs | NOT STARTED | Staff session identity, role, restaurant scope, transaction locks |
 | Live register cash workflow | NOT CONNECTED | Wire authenticated cash APIs to register UI |
 | Management backend reporting | NOT CONNECTED | Separate management site, blind counts, discrepancy approval |
@@ -22,7 +22,7 @@ Updated: 2026-11-15
 | Production acceptance testing | NOT STARTED | End-to-end tests with hardware and recovery scenarios |
 
 ## Next execution order
-1. Verify CI and latest Render deployment; fix any failing tests.
+1. COMPLETE: GitHub Actions run 43739620565 passed; Render commit e7cf3a27 deployed live. Independently check readiness endpoint response when possible.
 2. Review real database and authentication model without exposing cash write endpoints.
 3. Apply migration in controlled staging, then implement transaction-safe authorized cash APIs.
 4. Wire register and separate management UI.
@@ -32,3 +32,5 @@ Updated: 2026-11-15
 ## Change log
 - 2026-11-15: Added four-drawer browser simulator, transport selector, shift handoff, backend simulation, SQL schema, validation helpers, tests, CI configuration, and cash readiness API.
 - Each future change should update this tracker with observed test and deployment results, not assumed success.
+
+- 2026-11-15: Verified GitHub Actions run 43739620565 completed successfully and Render latest deployment for commit e7cf3a27 is live. Production cash remains disabled.
