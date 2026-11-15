@@ -14,7 +14,7 @@ Updated: 2026-11-15
 | Server-side authorization helpers | Committed; NOT INTEGRATED | cash/cash-controls.js |
 | Automated cash tests | PASSING in GitHub Actions run 43739620565 | npm run test:cash and Python unittest; CI workflow added |
 | Cash readiness API | DEPLOYED (Render latest live) | GET /api/cash/readiness; always reports production disabled |
-| Dedicated POS database | BLOCKED — not present in Render workspace; do not use Command Center or Workforce databases | Provision dedicated durable Postgres and verify connectivity |\n| Authenticated cash APIs | NOT STARTED | Staff session identity, role, restaurant scope, transaction locks |
+| Dedicated POS database | CREATED — provisioning (Render dpg-dbsuhlrbc2fs73cjvdf0-a); not connected | Verify available, configure POS service connection securely, inspect schema before migration |\n| Authenticated cash APIs | NOT STARTED | Staff session identity, role, restaurant scope, transaction locks |
 | Live register cash workflow | NOT CONNECTED | Wire authenticated cash APIs to register UI |
 | Management backend reporting | NOT CONNECTED | Separate management site, blind counts, discrepancy approval |
 | Physical printer and drawer transport | NOT IMPLEMENTED | Compatible hardware, Android/Windows bridge, integration tests |
@@ -36,3 +36,5 @@ Updated: 2026-11-15
 - 2026-11-15: Verified GitHub Actions run 43739620565 completed successfully and Render latest deployment for commit e7cf3a27 is live. Production cash remains disabled.
 
 - 2026-11-15: Render inventory verified: only tmj-command-center-db and restaurant-workforce-db listed. Dedicated POS database is missing. No production migration applied; keep cash writes disabled until separate database exists and secure auth is integrated.
+
+- 2026-11-15: Created dedicated Render Postgres tap3-pos-db (dpg-dbsuhlrbc2fs73cjvdf0-a), basic_256mb paid plan, Virginia, 1 GB. Render reports status creating. No connection credentials exposed, no schema migration applied, no live cash writes enabled. Next: wait for available, connect POS service via secure environment variable and verify schema.
