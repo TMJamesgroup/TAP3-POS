@@ -138,6 +138,30 @@ class CashDrawerSimulator:
             d.assigned_employee = None
             return event
 
+    def transfer_shift(self, drawer_id, outgoing_employee, incoming_employee,
+                       outgoing_denominations, incoming_denominations):
+        """Two independent counts required; no transfer if either differs from ledger."""
+        if not incoming_employee or incoming_employee == outgoing_employee:
+            raise ValueError("Different incoming employee required")
+        with self.lock:
+            d = self.drawers[drawer_id]
+            if not d.open_shift or d.assigned_employee != outgoing_employee:
+                raise PermissionError("Outgoing employee not assigned")
+            outgoing = self.count_total(outgoing_denominations)
+            incoming = self.count_total(incoming_denominations)
+            if outgoing != d.expected_cents or incoming != d.expected_cents:
+                self._event(d, "transfer_variance", outgoing_employee,
+                            outgoing_counted_cents=outgoing,
+                            incoming_counted_cents=incoming,
+                            expected_cents=d.expected_cents,
+                            incoming_employee=incoming_employee)
+                raise ValueError("Transfer variance requires manager resolution")
+            self._event(d, "transfer_out", outgoing_employee,
+                        counted_cents=outgoing, incoming_employee=incoming_employee)
+            d.assigned_employee = incoming_employee
+            return self._event(d, "transfer_in", incoming_employee,
+                               counted_cents=incoming, outgoing_employee=outgoing_employee)
+
     def receipt(self, items, total_cents):
         amount = cents(total_cents)
         if amount < 0:
