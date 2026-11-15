@@ -24,6 +24,14 @@ class SimulatorTests(unittest.TestCase):
             self.s.start_shift("bar-1", "bartender", {10000: 1})
         self.assertFalse(self.s.drawers["bar-1"].open_shift)
 
+    def test_transfer_requires_two_matching_counts(self):
+        self.s.start_shift("bar-1", "bartender", {10000: 2, 5000: 1})
+        with self.assertRaises(ValueError):
+            self.s.transfer_shift("bar-1", "bartender", "next", {10000: 2, 5000: 1}, {10000: 1})
+        self.assertEqual(self.s.drawers["bar-1"].assigned_employee, "bartender")
+        self.s.transfer_shift("bar-1", "bartender", "next", {10000: 2, 5000: 1}, {10000: 2, 5000: 1})
+        self.assertEqual(self.s.drawers["bar-1"].assigned_employee, "next")
+
     def test_no_real_print(self):
         job = self.s.receipt(["Burger"], 1500)
         self.assertFalse(job["printed"])
