@@ -1,0 +1,699 @@
+{
+  "restaurant": "TAP 2.0",
+  "location": "Dover, Delaware",
+  "source": "Owner-provided menu 2026-11-17",
+  "items": [
+    {
+      "name": "Traditional Bone-In Wings",
+      "category": "Wings",
+      "variant": "6 wings",
+      "price_cents": 999,
+      "status": "confirmed"
+    },
+    {
+      "name": "Traditional Bone-In Wings",
+      "category": "Wings",
+      "variant": "10 wings",
+      "price_cents": 1500,
+      "status": "confirmed"
+    },
+    {
+      "name": "Traditional Bone-In Wings",
+      "category": "Wings",
+      "variant": "15 wings",
+      "price_cents": 2199,
+      "status": "confirmed"
+    },
+    {
+      "name": "Traditional Bone-In Wings",
+      "category": "Wings",
+      "variant": "20 wings",
+      "price_cents": 2799,
+      "status": "confirmed"
+    },
+    {
+      "name": "Traditional Bone-In Wings",
+      "category": "Wings",
+      "variant": "30 wings",
+      "price_cents": 3999,
+      "status": "confirmed"
+    },
+    {
+      "name": "Boneless Wings",
+      "category": "Wings",
+      "variant": "10 pieces",
+      "price_cents": 1299,
+      "status": "proposed"
+    },
+    {
+      "name": "Boneless Wings",
+      "category": "Wings",
+      "variant": "20 pieces",
+      "price_cents": 2399,
+      "status": "proposed"
+    },
+    {
+      "name": "Boneless Wings",
+      "category": "Wings",
+      "variant": "30 pieces",
+      "price_cents": 3399,
+      "status": "proposed"
+    },
+    {
+      "name": "Pretzel Sticks",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "Chicken Potstickers",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "Deep-Fried Brussels",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1100,
+      "status": "confirmed"
+    },
+    {
+      "name": "Pick & Peel Shrimp",
+      "category": "Appetizers",
+      "variant": "½ lb",
+      "price_cents": 1399,
+      "status": "confirmed"
+    },
+    {
+      "name": "Pick & Peel Shrimp",
+      "category": "Appetizers",
+      "variant": "1 lb",
+      "price_cents": 2499,
+      "status": "confirmed"
+    },
+    {
+      "name": "Cheesesteak Egg Rolls",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "Buffalo Chicken Egg Rolls",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "Stuffed Lobster Egg Roll",
+      "category": "Appetizers",
+      "variant": "1 roll",
+      "price_cents": 1600,
+      "status": "confirmed"
+    },
+    {
+      "name": "Stuffed Lobster Egg Roll",
+      "category": "Appetizers",
+      "variant": "2 rolls",
+      "price_cents": 2800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Crabby Egg Rolls",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1500,
+      "status": "confirmed"
+    },
+    {
+      "name": "Fried Pickles",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1000,
+      "status": "confirmed"
+    },
+    {
+      "name": "Mozzarella Sticks",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1000,
+      "status": "confirmed"
+    },
+    {
+      "name": "Loaded Potato Skins",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "TAP Original Frings",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "Onion Rings",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1000,
+      "status": "confirmed"
+    },
+    {
+      "name": "Catfish Bites",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1300,
+      "status": "confirmed"
+    },
+    {
+      "name": "Drunken Mussels",
+      "category": "Appetizers",
+      "variant": null,
+      "price_cents": 1800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Loaded Nachos",
+      "category": "Loaded Nachos",
+      "variant": "Plain",
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "Loaded Nachos",
+      "category": "Loaded Nachos",
+      "variant": "Chicken",
+      "price_cents": 1600,
+      "status": "confirmed"
+    },
+    {
+      "name": "Loaded Nachos",
+      "category": "Loaded Nachos",
+      "variant": "Seasoned Ground Beef",
+      "price_cents": 1600,
+      "status": "confirmed"
+    },
+    {
+      "name": "Loaded Nachos",
+      "category": "Loaded Nachos",
+      "variant": "Shrimp",
+      "price_cents": 1800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Loaded Nachos",
+      "category": "Loaded Nachos",
+      "variant": "Crab & Shrimp",
+      "price_cents": 2100,
+      "status": "confirmed"
+    },
+    {
+      "name": "French Onion Soup",
+      "category": "Soups",
+      "variant": null,
+      "price_cents": 800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Chicken Tortilla Soup",
+      "category": "Soups",
+      "variant": null,
+      "price_cents": 800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Weekly Soup",
+      "category": "Soups",
+      "variant": null,
+      "price_cents": 800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Honey Adobo Shrimp Skewer Salad",
+      "category": "Salads",
+      "variant": null,
+      "price_cents": 1800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Tangy BBQ Ranch Salad",
+      "category": "Salads",
+      "variant": null,
+      "price_cents": 1500,
+      "status": "confirmed"
+    },
+    {
+      "name": "Twisted Cobb Salad",
+      "category": "Salads",
+      "variant": null,
+      "price_cents": 1600,
+      "status": "confirmed"
+    },
+    {
+      "name": "Caesar Salad",
+      "category": "Salads",
+      "variant": null,
+      "price_cents": 1400,
+      "status": "confirmed"
+    },
+    {
+      "name": "House Salad",
+      "category": "Salads",
+      "variant": null,
+      "price_cents": 1300,
+      "status": "confirmed"
+    },
+    {
+      "name": "8 oz Build Your Own Burger",
+      "category": "Build Your Own Burger",
+      "variant": null,
+      "price_cents": 1299,
+      "status": "confirmed"
+    },
+    {
+      "name": "TAP BBQ Burger",
+      "category": "Signature Burgers",
+      "variant": null,
+      "price_cents": 1599,
+      "status": "confirmed"
+    },
+    {
+      "name": "Buffalo Blue Burger",
+      "category": "Signature Burgers",
+      "variant": null,
+      "price_cents": 1499,
+      "status": "confirmed"
+    },
+    {
+      "name": "Takeout Burger",
+      "category": "Signature Burgers",
+      "variant": null,
+      "price_cents": 1699,
+      "status": "confirmed"
+    },
+    {
+      "name": "Cheeseburger",
+      "category": "Signature Burgers",
+      "variant": null,
+      "price_cents": 1399,
+      "status": "confirmed"
+    },
+    {
+      "name": "Hamburger",
+      "category": "Signature Burgers",
+      "variant": null,
+      "price_cents": 1299,
+      "status": "confirmed"
+    },
+    {
+      "name": "South Philly Burger",
+      "category": "Signature Burgers",
+      "variant": null,
+      "price_cents": 1599,
+      "status": "confirmed"
+    },
+    {
+      "name": "Original Chop",
+      "category": "Chopped Burger Subs",
+      "variant": null,
+      "price_cents": 1700,
+      "status": "confirmed"
+    },
+    {
+      "name": "Bacon BBQ Chop",
+      "category": "Chopped Burger Subs",
+      "variant": null,
+      "price_cents": 1800,
+      "status": "confirmed"
+    },
+    {
+      "name": "South Philly Chop",
+      "category": "Chopped Burger Subs",
+      "variant": null,
+      "price_cents": 1800,
+      "status": "confirmed"
+    },
+    {
+      "name": "TAP Beef Cheesesteak",
+      "category": "Cheesesteaks & Subs",
+      "variant": null,
+      "price_cents": 1399,
+      "status": "confirmed"
+    },
+    {
+      "name": "TAP Chicken Cheesesteak",
+      "category": "Cheesesteaks & Subs",
+      "variant": null,
+      "price_cents": 1399,
+      "status": "confirmed"
+    },
+    {
+      "name": "Buffalo Chicken Cheesesteak",
+      "category": "Cheesesteaks & Subs",
+      "variant": null,
+      "price_cents": 1499,
+      "status": "confirmed"
+    },
+    {
+      "name": "Land & Sea Cheesesteak",
+      "category": "Cheesesteaks & Subs",
+      "variant": null,
+      "price_cents": 2200,
+      "status": "confirmed"
+    },
+    {
+      "name": "South Philly Sub",
+      "category": "Cheesesteaks & Subs",
+      "variant": null,
+      "price_cents": 1599,
+      "status": "confirmed"
+    },
+    {
+      "name": "Blackened Salmon Sandwich",
+      "category": "More Handhelds",
+      "variant": null,
+      "price_cents": 1800,
+      "status": "confirmed"
+    },
+    {
+      "name": "Turkey Burger",
+      "category": "More Handhelds",
+      "variant": null,
+      "price_cents": 1600,
+      "status": "confirmed"
+    },
+    {
+      "name": "Grilled Veggie Wrap",
+      "category": "More Handhelds",
+      "variant": null,
+      "price_cents": 1500,
+      "status": "confirmed"
+    },
+    {
+      "name": "Veggie Flatbread",
+      "category": "Flatbreads",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "BLT Flatbread",
+      "category": "Flatbreads",
+      "variant": null,
+      "price_cents": 1500,
+      "status": "confirmed"
+    },
+    {
+      "name": "Buffalo Chicken Flatbread",
+      "category": "Flatbreads",
+      "variant": null,
+      "price_cents": 1600,
+      "status": "confirmed"
+    },
+    {
+      "name": "Cheeseburger Flatbread",
+      "category": "Flatbreads",
+      "variant": null,
+      "price_cents": 1600,
+      "status": "confirmed"
+    },
+    {
+      "name": "Crab & Shrimp Flatbread",
+      "category": "Flatbreads",
+      "variant": null,
+      "price_cents": 2000,
+      "status": "confirmed"
+    },
+    {
+      "name": "Tuscany Stuffed Salmon",
+      "category": "TAP Entrées",
+      "variant": null,
+      "price_cents": 3000,
+      "status": "confirmed"
+    },
+    {
+      "name": "Tuscany Chicken",
+      "category": "TAP Entrées",
+      "variant": null,
+      "price_cents": 2400,
+      "status": "confirmed"
+    },
+    {
+      "name": "New Orleans Chicken Pasta",
+      "category": "TAP Entrées",
+      "variant": null,
+      "price_cents": 2200,
+      "status": "confirmed"
+    },
+    {
+      "name": "Fried Lobster Mac & Cheese",
+      "category": "TAP Entrées",
+      "variant": null,
+      "price_cents": 3000,
+      "status": "confirmed"
+    },
+    {
+      "name": "Cod Fish & Chips",
+      "category": "Fish & Seafood",
+      "variant": null,
+      "price_cents": 1900,
+      "status": "confirmed"
+    },
+    {
+      "name": "Fried Catfish Dinner",
+      "category": "Fish & Seafood",
+      "variant": null,
+      "price_cents": 2000,
+      "status": "confirmed"
+    },
+    {
+      "name": "Fried Shrimp Dinner",
+      "category": "Fish & Seafood",
+      "variant": null,
+      "price_cents": 2200,
+      "status": "confirmed"
+    },
+    {
+      "name": "Fish & Shrimp Combo",
+      "category": "Fish & Seafood",
+      "variant": null,
+      "price_cents": 2400,
+      "status": "confirmed"
+    },
+    {
+      "name": "Chicken Fingers & Fries",
+      "category": "Kids Menu",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Burger & Fries",
+      "category": "Kids Menu",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Cheeseburger & Fries",
+      "category": "Kids Menu",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Boneless Wings & Fries",
+      "category": "Kids Menu",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Grilled Cheese & Fries",
+      "category": "Kids Menu",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Mac & Cheese",
+      "category": "Kids Menu",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Kids Pasta",
+      "category": "Kids Menu",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "French Fries",
+      "category": "Sides",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "House Chips",
+      "category": "Sides",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Coleslaw",
+      "category": "Sides",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Vegetable of the Week",
+      "category": "Sides",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Roasted Potatoes",
+      "category": "Sides",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Baked Potato",
+      "category": "Sides",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Sautéed Spinach",
+      "category": "Sides",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    },
+    {
+      "name": "Weekly Desserts",
+      "category": "Desserts",
+      "variant": null,
+      "price_cents": null,
+      "status": "tbd"
+    }
+  ],
+  "modifiers": {
+    "wing_sauces": {
+      "TAP Originals": [
+        "Original TAP",
+        "TAP Hot",
+        "Sweet Heat",
+        "Honey Adobo",
+        "Spicy Garlic",
+        "Honey Garlic",
+        "Chesapeake Garlic Parmesan"
+      ],
+      "Buffalo": [
+        "Mild",
+        "Medium",
+        "Hot",
+        "Extra Hot",
+        "Buffalo Garlic",
+        "Buffalo Ranch",
+        "Buffalo Garlic Parmesan"
+      ],
+      "BBQ": [
+        "Classic BBQ",
+        "Honey BBQ",
+        "Hot Honey BBQ",
+        "Bourbon BBQ",
+        "Carolina Gold",
+        "Sweet & Smoky BBQ"
+      ],
+      "Sweet & Sticky": [
+        "Teriyaki",
+        "Sweet Chili",
+        "Garlic Teriyaki",
+        "Honey Garlic",
+        "Mango Habanero",
+        "Pineapple Sweet Heat"
+      ],
+      "Dry Rubs": [
+        "Old Bay",
+        "Lemon Pepper",
+        "Cajun",
+        "Garlic Parmesan",
+        "Chesapeake",
+        "BBQ Rub"
+      ]
+    },
+    "wings": {
+      "all_flats_or_drums_surcharge_cents": 200,
+      "includes_dip": [
+        "Homemade Ranch",
+        "Homemade Blue Cheese"
+      ]
+    },
+    "burger": {
+      "cheese_included": [
+        "American",
+        "Cheddar",
+        "Provolone",
+        "Blue Cheese Crumbles"
+      ],
+      "toppings_included": [
+        "Lettuce",
+        "Tomato",
+        "Red Onion",
+        "Pickles",
+        "Fried Onions",
+        "Sweet Peppers",
+        "Hot Peppers",
+        "Mushrooms"
+      ],
+      "sauces_included": [
+        "TAP Burger Sauce",
+        "BBQ",
+        "Buffalo",
+        "Honey Pesto",
+        "Jen’s Sauce"
+      ],
+      "premium_add_ons_cents": {
+        "Bacon": 200,
+        "Fried Egg": 150,
+        "Avocado": 200,
+        "Fried Onion Straws": 100
+      }
+    },
+    "side_upgrades_cents": {
+      "Sweet Potato Fries": 200,
+      "Tater Tots": 200,
+      "Mac & Cheese": 300,
+      "Brussels Sprouts": 300,
+      "Onion Rings": null,
+      "TAP Original Frings": null
+    },
+    "land_and_sea_lobster_total_cents": 2800,
+    "kids_pasta_sauces": [
+      "Butter",
+      "Marinara",
+      "Meat Sauce"
+    ]
+  },
+  "notes": [
+    "Unpriced items must remain unavailable for sale.",
+    "Boneless wing prices proposed, not approved.",
+    "Modifiers are catalog definitions only; existing POS schema does not yet support modifier selections.",
+    "Side upgrade prices for onion rings and Frings are TBD."
+  ]
+}
