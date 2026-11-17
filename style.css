@@ -173,3 +173,22 @@ nav button:last-child{background:#dde8f7!important;color:#1a4c87!important}
 
 /* Touchscreen-first kitchen display controls */
 .kds-board{touch-action:pan-y;overscroll-behavior:contain}.kds-board button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;cursor:pointer}.kds-board .kds-touch-ready{display:block;width:100%;min-height:76px;margin-top:20px;padding:18px 12px;font-size:clamp(18px,2vw,25px);font-weight:800;letter-spacing:.02em;border-radius:12px}.kds-board .kds-touch-control{min-height:58px;padding:12px 20px;font-size:18px}.kds-board .kds-ticket{min-width:0;padding:20px}.kds-board .kds-ticket p{font-size:clamp(17px,1.6vw,23px);line-height:1.4}.kds-board .kds-ticket button:focus-visible{outline:4px solid #fff;outline-offset:3px}@media(max-width:800px){.kds-board .kds-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}.kds-board .kds-touch-ready{min-height:82px}}
+
+/* TAP 2.0 register: compact mobile-first item entry without giant placeholder tiles */
+.tap-add-hint{font-size:.78em;font-weight:700;margin-left:8px;color:#1975c9}
+.menu .menu-tile-icon{display:none!important}
+.menu .menu-tile{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;text-align:left;gap:8px;min-height:100px;padding:13px;border-radius:12px}
+.menu .menu-tile strong{font-size:clamp(14px,1.3vw,18px);line-height:1.3}
+.menu .menu-tile b{font-size:clamp(14px,1.25vw,17px)}
+.menu .menu-tile .menu-photo{width:100%;max-height:100px;object-fit:cover}
+@media(max-width:700px){
+  html,body,#root,main{max-width:100%;overflow-x:hidden}
+  .columns,.columns>article,.columns>section{min-width:0;max-width:100%}
+  .menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .menu .menu-item-wrap{min-width:0}
+  .menu .menu-tile{width:100%;min-height:94px;padding:10px;overflow-wrap:anywhere}
+  .menu .menu-tile .menu-photo{display:none}
+  .menu .item-86-controls{margin-top:3px}
+  .menu-sections,.categorybar{max-width:100%;overflow-x:auto;scrollbar-width:thin}
+  .check-panel{max-width:100%;min-width:0}
+}
