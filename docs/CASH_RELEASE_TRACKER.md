@@ -38,3 +38,8 @@ Updated: 2026-11-15
 - 2026-11-15: Render inventory verified: only tmj-command-center-db and restaurant-workforce-db listed. Dedicated POS database is missing. No production migration applied; keep cash writes disabled until separate database exists and secure auth is integrated.
 
 - 2026-11-15: Created dedicated Render Postgres tap3-pos-db (dpg-dbsuhlrbc2fs73cjvdf0-a), basic_256mb paid plan, Virginia, 1 GB. Render reports status creating. No connection credentials exposed, no schema migration applied, no live cash writes enabled. Next: wait for available, connect POS service via secure environment variable and verify schema.
+
+## TAP 2.0 Menu Import (2026-11-17)
+- Owner-supplied menu catalog committed: `data/tap2-menu.json` (84 priced/variant/TBD entries: 65 confirmed, 3 proposed, 16 TBD).
+- Guarded importer committed: `scripts/import-tap2-menu.mjs`; dry-run default, `--apply` requires DATABASE_URL and TAP2_RESTAURANT_ID, verifies restaurant name.
+- **NOT IMPORTED INTO LIVE DATABASE**: POS connection and TAP 2.0 restaurant record not verified. Modifier configuration still requires POS integration. Proposed boneless wings and unpriced items excluded from sale.
