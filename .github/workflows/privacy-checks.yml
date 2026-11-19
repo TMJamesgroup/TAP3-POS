@@ -1,0 +1,37 @@
+name: TAP3 POS privacy acknowledgment tests
+on:
+  pull_request:
+    paths:
+      - 'src.jsx'
+      - 'server.js'
+      - 'public/tap3-privacy-policy.html'
+      - 'db/pos_privacy_acknowledgments.sql'
+      - '.github/workflows/privacy-checks.yml'
+permissions:
+  contents: read
+jobs:
+  privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-package-lock --no-audit --no-fund
+      - run: npm run build
+      - run: node --check server.js
+      - run: npm run test:cash
+      - name: Verify server-side ledger, frontend gate and policy are all present
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          sql=Path('db/pos_privacy_acknowledgments.sql').read_text()
+          assert 'FORCE ROW LEVEL SECURITY' in sql and 'AS RESTRICTIVE' in sql
+          assert 'auth.uid()' in sql and 'policy_sha256' in sql
+          assert 'SECURITY INVOKER' in sql and 'SECURITY DEFINER RPCs bypass RLS' in sql
+          jsx=Path('src.jsx').read_text()
+          assert 'POSPrivacyReview' in jsx and 'pos_privacy_acknowledge' in jsx
+          assert 'pos_privacy_status' in jsx
+          assert 'SAMEORIGIN' in Path('server.js').read_text()
+          assert len(Path('public/tap3-privacy-policy.html').read_bytes())>40000
+          PY
