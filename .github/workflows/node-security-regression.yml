@@ -1,0 +1,32 @@
+name: Node security regression
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - run: node --version
+      - run: npm install
+      - run: npm run build
+      - run: npm run test:cash
+      - name: Synthetic HTTP smoke
+        shell: bash
+        run: |
+          unset DATABASE_URL POS_COMMAND_CENTER_KEY ONLINE_RESTAURANT_ID
+          PORT=18080 npm start > /tmp/pos-ci.log 2>&1 &
+          trap 'kill $! 2>/dev/null || true' EXIT
+          for i in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:18080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          curl --fail --silent http://127.0.0.1:18080/ >/dev/null
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:18080/api/command-center/summary)" = 401
+          curl --fail --silent http://127.0.0.1:18080/api/cash/readiness | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>{if(JSON.parse(s).production_cash_enabled!==false)process.exit(1)})'
